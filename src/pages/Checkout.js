@@ -55,7 +55,7 @@ function Checkout() {
 								<span className="font-bold mx-2">
 									<Currency quantity={total} currency="INR" />
 								</span>
-							</h2>
+							</h2>{/*  */}
 							<button
 								disabled={!session}
 								className={`button mt-2 ${
