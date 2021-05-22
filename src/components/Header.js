@@ -23,7 +23,7 @@ function Header() {
 				<div className="flex items-center flex-grow -mt-1 mr-2 sm:flex-grow-0">
 					<Image
 						onClick={() => router.push('/')}
-						src="/../public/logo.png"
+						src="/logo.png"
 						width={150}
 						height={40}
 						objectFit="contain"
