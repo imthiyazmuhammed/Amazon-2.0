@@ -5,13 +5,13 @@ import Productfeed from '../components/Productfeed';
 
 export default function Home({ products }) {
 	return (
-		<div className="bg-gray-100 ">
+		<div className="bg-gray-100  top-0">
 			<Head>
-				<title>Amazon 2.0</title>
+				<title>Kuttys</title>
 			</Head>
 
 			<Header />
-			<main className="max-w-screen-2xl mx-auto">
+			<main className="max-w-screen-2xl mx-auto ">
 				<Banner />
 				<Productfeed products={products} />
 			</main>

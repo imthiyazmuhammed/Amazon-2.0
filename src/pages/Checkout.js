@@ -1,10 +1,10 @@
-import { session, useSession } from 'next-auth/client';
+import { useSession } from 'next-auth/client';
 import Image from 'next/image';
 import { useSelector } from 'react-redux';
-import CheckoutProduct from '../components/CheckoutProduct';
 import Header from '../components/Header';
 import { selectItems, selectTotal } from '../slices/basketSlice';
 import Currency from 'react-currency-formatter';
+import CheckoutProduct from '../components/CheckoutProduct';
 
 function Checkout() {
 	const items = useSelector(selectItems);
@@ -55,14 +55,15 @@ function Checkout() {
 								<span className="font-bold mx-2">
 									<Currency quantity={total} currency="INR" />
 								</span>
-							</h2>{/*  */}
+							</h2>
+							{/*  */}
 							<button
 								disabled={!session}
 								className={`button mt-2 ${
 									!session &&
 									'from-gray-300 to-gray-500 border-gray-200 text-gray-300 cursor-not-allowed'
 								}`}>
-								{!session ? 'Sign in to session ' : 'checkout'}
+								{!session ? 'Sign in to Checkout ' : 'checkout'}
 							</button>
 						</>
 					)}
