@@ -41,15 +41,16 @@ function Header() {
 				<div className="text-white flex items-center text-xs space-x-6 mx-6 whitespace-nowrap">
 					<div onClick={!session ? signIn : signOut} className="link">
 						<p> {session ? `Hello, ${session.user.name}` : 'SignIn'} </p>
-						<p onClick={()=>router.push('/orders')} className="font-extrabold md:text-sm">Account</p>
+						<p className="font-extrabold md:text-sm">Account</p>
 					</div>
-					<div className="link">
+					<div onClick={() => router.push('/orders')} className="link">
 						<p className="font-extrabold md:text-sm">Orders</p>
 					</div>
 					<div
 						onClick={() => router.push('/checkout')}
 						className="relative link flex items-center ">
-						<span className="absolute top-0 right-0 md:right-10 h-4 w-4 bg-yellow-400 text-center rounded-full text-black font-bold">{/*  */}
+						<span className="absolute top-0 right-0 md:right-10 h-4 w-4 bg-yellow-400 text-center rounded-full text-black font-bold">
+							{/*  */}
 							{items.length}
 						</span>
 						<ShoppingCartIcon className="h-10" />
